@@ -40,14 +40,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Treasure Hunt!</h1>
-        <button onclick="startActivity()">Start Activity</button>
+        <h1> Welcome to Treasure Hunt !!</h1>
         <p id="message"></p>
+      <img id="funImage" src="images/image_ans.jpg" alt="Fun Activity Image">
     </div>
 
     <script>
-        function startActivity() {
-            document.getElementById('message').innerText = "Let's have some fun!";
+        const images = [
+            "images/image1.jpg"
+        ];
+
+        function changeImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            document.getElementById('funImage').src = images[randomIndex];
         }
     </script>
 </body>
